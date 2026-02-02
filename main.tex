@@ -1,0 +1,138 @@
+\documentclass[aps,prl,reprint,superscriptaddress,longbibliography]{revtex4-1}
+
+\usepackage[dvips,hiresbb]{graphicx}
+\usepackage{color}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage[version=3]{mhchem}
+\usepackage{siunitx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[icelandic,english]{babel}
+\usepackage{textcomp}
+\setlength{\tabcolsep}{20pt}
+\renewcommand{\arraystretch}{1.5}
+\usepackage{lipsum}
+
+%bætti við
+\sisetup{
+  separate-uncertainty = true
+}
+\usepackage{array}
+
+\begin{document}
+\def\bibsection{\section*{Heimildir}}
+
+
+\title{Geislunarafl ljósaperu}
+
+\author{Fríða Margrét Guðmundsdóttir}
+\affiliation{Science Institute, University of Iceland, Dunhaga 3, IS-107 Reykjavik, Iceland}
+
+\date{20/04/2025}
+
+\begin{abstract}
+
+\end{abstract}
+\maketitle{}
+
+\section{Inngangur}
+
+Margir kannast við að hefðbundnar glóperur hitna verulega þegar þær loga. Hitinn sem myndast er vegna samspils milli rafstraums, spennu og viðnáms.  Ljósaperur, sérstaklega þær sem byggja á glóþræði úr wolfram, eru gott dæmi um kerfi þar sem rafleiðni breytist við hita. Þegar spennu er beitt eykst straumurinn, glóþráðurinn hitnar og þegar hitastigið verður nægilega hátt þá fer peran að glóa. 
+
+Á sama tíma og vírinn hitnar hækkar viðnámið. Þetta stafar af því að atómin í kristalgrindinni titra meira við hærra hitastig. Aukinn titringur veldur því að rafeindirnar sem flytja rafstraumin rekast oftar á atómin og viðnámið eykst. Þessi breyting á viðnámi veldur því að sambandið milli spennu og straums verður ólínulegt og ljósaperan hagar sér eins og leiðari sem er ekki ohmískur. Því gildir lögmál Ohm’s ekki lengur í sinni einföldu mynd.
+
+Í þessari tilraun skoðum við hvernig viðnám ljósaperu þróast með spennu og hvernig hægt er að meta hitastig hennar út frá mælingum á spennu og straumi. Geislunarafl hennar er borið saman við vænt gildi samkvæmt lögmáli Stefan-Boltzmann til að ákvarða eðlisgeislunareiginleika glóþráðarins.
+
+\section{Fræði}
+Lögmál Ohm's lýsir sambandi spennu, straums og viðnáms þar sem hitastig helst stöðugt. Það tengir saman hversu mikill rafstraumur, $I$, rennur í gegnum viðnám, $R$, þegar spenna, $V$, er sett yfir viðnámið
+%Lögmálið er yfirleitt sett fram sem
+\begin{equation} \label{eq:ohm}
+V = IR
+\end{equation}
+
+Þó að lögmál Ohm's eigi við um mörg efni við stöðugt hitastig þá er vel þekkt að viðnám málma vex með hitastigi. Einfalt líkan sem lýsir hvernig viðnám breytist með hitastigi er gefið með
+\begin{equation}\label{eq:vidnam_malma}
+R = R_0[1 + \alpha(T - T_0)]
+\end{equation}
+þar sem $R_0$  er upphafsviðnám efnisins við hitastigið $T_0$ og $R$ er viðnámið við hitastigið $T$. Fastinn \( \alpha \) er hitastuðull efnisins og hefur mismunandi gildi eftir málmum.
+
+Líkanið má einnig nota til þess að ákvarða hitastig út frá viðnámsbreytingunni (miðað við $T_0$) ef hitastigulinn \( \alpha \) er þekktur
+\begin{equation} \label{eq:hitastig}
+T = \left( \frac{ \ \frac{R}{R_0} - 1 \ }{\alpha} \right) + T_0
+\end{equation}
+
+Þegar spennan yfir ljósaperuna eykst, hitnar glóþráðurinn í ljósaperunni vegna aukins straumflæðis. Hitinn veldur því að glóþráðurinn gefur frá sér varma með geislun. Upphaflega sést dauflegt rautt ljós en eftir því sem hitinn hækkar verður geislunin sýnilegari og hvítari að lit. Glóþráðurinn er úr wolfram sem hefur hátt bræðslumark og góða rafleiðni og þolir því háan hita. Til að koma í veg fyrir að hann oxist er ljósaperan fyllt með eðalgasi sem hvarfast ekki við wolfram og lengir líftíma glóþráðarins.
+
+Geislunarafl hlutar við hitastig \( T \) má lýsa með lögmáli Stefan-Boltzmann
+\begin{equation} \label{eq:stefan_boltzmann}
+P = \sigma \varepsilon S T^4
+\end{equation}
+hér er $P$ heildaraflið sem geislast frá yfirborði hlutar, $\sigma$ er Stefan-Boltzmann fastinn, $\varepsilon$ er eðlisgeislun efnisins, $0 < \varepsilon < 1$, $S$ er yfirborðsflatarmál hlutarins og $T$ er hitastig í kelvin.
+
+Ef efni væri fullkominn svarthlutur þá væri $\varepsilon = 1$ en fyrir raunveruleg efni eins og wolfram gildir að $\varepsilon < 1$. Þetta samband gerir okkur kleift að áætla eðlisgeislun efnisins út frá mældu afli og hitastigi.
+
+Lögmálið lýsir því að geislunarafl eykst með fjórða veldi hitastigs og er í beinu hlutfalli við yfirborðsflatarmál og eðlisgeislun hlutarins. Þetta samband nýtist til að meta eðlisgeislun efnis út frá mældu geislunarafli og áætluðu hitastigi.
+
+\section{Niðurstöður og umfjöllun}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{graf_hluti1.png}
+    \caption{Viðnám ljósaperunnar sem fall af spennu. Viðnámið eykst hratt í upphafi en hægir á aukningunni með hækkandi spennu.}
+    \label{fig:graf_hluti1}
+\end{figure}
+Mynd~\ref{fig:graf_hluti1} sýnir að viðnámið eykst með spennu en ekki línulega, heldur hægir á aukningunni eftir því sem spennan eykst. Þetta er vísbending um að viðnámið sé hitaháð og að lögmál Ohm's gildi ekki í þessu tilviki. Þá hegðar ljósaperan sér eins og leiðari sem er ekki ohmískur. Við lága spennu var ljósið dauflegt en við hærri spennu kviknaði á ljósaperunni og birtustigið jókst greinilega sem styður það að glóþráðurinn hitni með aukinni spennu og straumflæði.
+
+Við notuðum upphafsviðnámið og gefið eðlisviðnám wolframs, \( \rho = \SI{5.6e-8}{\ohm\meter} \), til að meta lengd vírsins samkvæmt jöfnu~\ref{eq:lengd}. Þvermál vírsins var \( D = 30\,\mu\text{m} \) sem gefur að \( l = \SI{0.0389}{\meter} \) og \( S = \SI{3.66e-6}{\meter\squared} \).
+
+Með því að nota hitastuðul wolframs og viðnámsgildi við mismunandi spennur var hitastig vírsins áætlað með jöfnu~\ref{eq:hitastig}. Með þeim gildum og reiknuðu yfirborðsflatarmáli $S$ var hægt að beita lögmáli Stefan–Boltzmann og reikna út afl $P$ sem fall af \( T^4 \).
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{graf_hluti2.png}
+    \caption{Geislunarafl, $P$, sem fall af $T^4$. Línulegt samband samkvæmt Stefan–Boltzmann. Hallatala línunnar samsvarar $\sigma \varepsilon S$ og gefur kost á að ákvarða $\varepsilon$.}
+    \label{fig:graf_hluti2}
+\end{figure}
+Á mynd~\ref{fig:graf_hluti2} má sjá að afl eykst línulega með \( T^4 \) sem er í samræmi við fræðilega spá Stefan–Boltzmann lögmálsins. Hallatala línunnar var \( (8.4 \pm 1.6) \times 10^{-14}\,\text{W/K}^4 \). Þar sem \( \sigma \) og \( S \) eru þekkt, fengum við að
+\[\
+\varepsilon = 0{,}43 \pm 0{,}09
+\]
+ Þetta gildi fellur innan fræðilegra marka þar sem $\varepsilon$ á að vera á bilinu $0 < \varepsilon < 1$ og er því niðurstaðan í samræmi við væntingar um eiginleika glóþráðar í ljósaperu.
+
+\section{Lokaorð}
+Markmiðið með þessari rannsókn var að kanna hvernig viðnám glóþráðar í ljósaperu breytist með spennu og hvort geislunarafl hans fylgi lögmáli Stefan–Boltzmann.
+
+Mælingarnar sýndu að viðnám glóþráðarins jókst með hærri spennu sem bendir til þess að hann hitni við aukið straumflæði. Þessi hegðun stangast á við klassíska framsetningu Ohm's lögmálsins sem gerir ráð fyrir föstu viðnámi en er í samræmi við þekkta eiginleika málma þar sem viðnám eykst með hitastigi.
+
+Með því að rita afl sem fall af \( T^4 \) og beita lögmáli Stefan–Boltzmann var eðlisgeislun vírsins metin sem \( \varepsilon = 0{,}43 \pm 0{,}09 \). Þetta gildi fellur innan væntanlegra marka og styður við þá niðurstöðu að lögmál Stefan-Boltzmann lýsi vel geislunareiginleikum glóþráðar úr wolfram.
+
+\section{Framkvæmd}
+
+\begin{figure} [ht!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{mynd_hluti1.png}
+    \caption{Mynd úr \cite{vinnusedill2025}. Skematísk mynd af rafrásinni. Ljósapera tengd við spennugjafa með spennu- og straummæli til að mæla spennu og straum.}
+    \label{fig:mynd_hluti1}
+\end{figure}
+ Mynd~\ref{fig:mynd_hluti1} sýnir skematíska uppstillingu tilraunarinnar. Ljósapera var tengd við spennugjafa og við hana voru tengdir spennu- og straummælir í röð. Upphafsviðnám ljósaperunnar, $R_0$, var ákvarðað með því að leggja lágspennu, $V = 0,01V$, á rásina og mæla samsvarandi straum með straummæli. Mældist straumurinn \( I = (0.520 \pm 0.005)\,\si{\milli\ampere} \) og spennan \( V = (1.60 \pm 0.02)\,\si{\milli\volt} \) sem gefur að \( R_0 = \SI{3.08 \pm 0.07}{\ohm} \) samkvæmt lögmáli Ohm's (jafna~\ref{eq:ohm}).
+
+Spennugildum var breytt frá \SI{1}{\volt} upp í \SI{8}{\volt} og við hvert gildi var lesið af spennu- og straummæli. Mæligildin voru notuð til að reikna viðnám ljósaperunar við hvert gildi með lögmáli Ohm's og þar af leiðandi hitastig vírsins samkvæmt jöfnu~\ref{eq:hitastig}.
+
+Til að ákvarða eðlisgeislun efnisins í ljósaperuvírnum var stuðst við lögmál Stefan–Boltzmann, jafna~\ref{eq:stefan_boltzmann}. Þvermál ljósaperuvírsins var gefið sem \( D = \SI{30}{\micro\meter} \) en lengd hans var óþekkt. Eðlisviðnám wolfram var gefið með \( \rho = \SI{5.6e-8}{\ohm\meter} \). Með upphafsviðnáminu, \( R_0 = \SI{3.08 \pm 0.07}{\ohm} \), var því hægt að reikna út lengd vírsins með
+\begin{equation}
+l = \frac{R_0 A}{\rho}
+\label{eq:lengd}
+\end{equation}
+þar sem $A$ er þverskurðarflatarmál vírsins. Þá reiknast yfirborðsflatarmál vírsins sem
+\begin{equation}
+S = \frac{R_0 \pi D^2}{4 \rho}
+\label{eq:yfirbordsflatarmal}
+\end{equation}
+Út frá mældum straum og spennu var reiknað afl sem dælt var til ljósaperunnar. Með því að beyta jöfnu~\ref{eq:hitastig} var hitastig vírsins metin út frá breyttu viðnámi. Teiknað var graf sem sýnir geislunarafl \( P \) sem fall af \( T^4 \) og hallatala línunnar var ákvörðuð. Með reiknuðu yfirborðsflatarmáli og jöfnu~\ref{eq:stefan_boltzmann} var eðlisgeislun \( \varepsilon \) wolframs fundin.
+
+
+\bibliographystyle{apsrev4-1}
+\bibliography{biblio}
+
+
+\end{document}
